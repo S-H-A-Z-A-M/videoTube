@@ -313,7 +313,7 @@ const updateUserAvatar = asyncHandler(async (req, res) => {
 
   const deleteResponse = DeleteCloudinaryAsset(oldAvatarImage);
 
-  if (!deletedResponse) {
+  if (!deleteResponse) {
     new ApiError(500, "Error while deleting previous avatar");
   }
 
